@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body{
+	background-image: url("/chatCat/image/hospital.jpg");
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-color:rgba(255,255,255,0.5);
+	background-blend-mode:lighten;
+}
+
+img{
+	position: absolute;
+	bottom: 20px;
+	right: 200px;
+	width: 300px;
+}
+
+.hukidashi-container{
+	background-color: white;
+	border-radius: 30px;
+	width: 500px;
+	margin: 100px auto;
+	padding: 50px;
+	box-shadow: 3px 3px 10px 0 rgba(223, 223, 223, 0.7);
+}
+
+.hukidashi-p{
+	margin-bottom: 10px;
+}
+
+.hukidashi-a{
+	background-color: #87B5A7;
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 5px;
+}
