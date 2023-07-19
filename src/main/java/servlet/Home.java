@@ -71,6 +71,7 @@ public class Home extends HttpServlet{
 	      request.setAttribute("errorMsg", "つぶやきが入力されていません");
 	    }
 	    
+	    // 猫が投稿する
 	    PostAuto postauto = new PostAuto();
 	    postauto.timer_create(bbs_type, user_account);
 
