@@ -7,6 +7,7 @@
 User loginUser = (User) session.getAttribute("loginUser");
 Map<String, Integer> PostCountsEachBbsList = (Map<String, Integer>)request.getAttribute("postCountsEachBbsList");
 int postedTimesSum = (int)request.getAttribute("postedTimesSum");
+int level = (int)request.getAttribute("level");
 %>
 
 <!DOCTYPE html>
@@ -26,8 +27,8 @@ int postedTimesSum = (int)request.getAttribute("postedTimesSum");
 				<h1><%=loginUser.getUserid()%>さん</h1>
 			</div>
 			<div>
-				<h2>レベル</h2>
-				<p><%=postedTimesSum %></p>
+				<h2>レベル<%=level %></h2>
+				<p>総投稿回数 <%=postedTimesSum %> 回</p>
 			</div>
 			<div>
 				<h2>投稿頻度</h2>

@@ -18,7 +18,7 @@ import model.PostMutterLogic;
 // 板と猫を指定して投稿を作成する
 public class SelectPromptAndPost {
 	public void create(String bbs_type, String user_account, String cat) {
-		final String token = "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";
+		final String token = System.getenv("GPTAPIkey");
         final OpenAiService service = new OpenAiService(token, Duration.ofSeconds(30));
         List<GetMutter> mutterList = new ArrayList<GetMutter>();
         Map<String, String> catPromptDic = new HashMap<String, String>() {

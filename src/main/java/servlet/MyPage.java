@@ -33,6 +33,10 @@ public class MyPage extends HttpServlet {
 		int postedTimesSum = analyzePosts.sumPostedTimes(loginUser.getUserid());
 		request.setAttribute("postedTimesSum", postedTimesSum);
 		
+		// レベル
+		int level = analyzePosts.calculateLevel(loginUser.getUserid());
+		request.setAttribute("level", level);
+		
 		// JSPへフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/mypage.jsp");
 	    dispatcher.forward(request, response);
