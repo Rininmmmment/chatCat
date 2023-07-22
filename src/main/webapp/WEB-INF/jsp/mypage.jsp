@@ -5,6 +5,7 @@
 <%
 // セッションスコープに保存されたユーザー情報を取得
 User loginUser = (User) session.getAttribute("loginUser");
+// 投稿分析情報を取得
 Map<String, Integer> PostCountsEachBbsList = (Map<String, Integer>)request.getAttribute("postCountsEachBbsList");
 int postedTimesSum = (int)request.getAttribute("postedTimesSum");
 int level = (int)request.getAttribute("level");
@@ -29,9 +30,11 @@ int level = (int)request.getAttribute("level");
 			<div>
 				<h2>レベル<%=level %></h2>
 				<p>総投稿回数 <%=postedTimesSum %> 回</p>
+				<p>にゃ〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜</p>
 			</div>
+			
 			<div>
-				<h2>投稿頻度</h2>
+				<h2>投稿回数</h2>
 				<% 
 				List<String> BbsList = Arrays.asList("home", "matatabi", "restaurant", "school", "clinic");
 				List<String> DisplayBbsList = Arrays.asList("ホーム", "またたび広場", "レストラン", "学習室", "クリニックサービス");
@@ -40,8 +43,42 @@ int level = (int)request.getAttribute("level");
 					<h3><%=DisplayBbsList.get(i) %></h3>
 					<p><%=PostCountsEachBbsList.get(BbsList.get(i)) %> 回</p>
 				<% } %>
+				<p>にゃ〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜</p>
 			</div>
 			
+			<div>
+				<h2>ねこランキング</h2>
+				<p>にゃ〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜</p>
+			</div>
+			
+			<div>
+				<h2>お気に入り</h2>
+				<p>にゃ〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜</p>
+			</div>
+			
+			<div>
+				<h2>メールアドレス</h2>
+				<p>暇な時にメールするにゃ〜〜</p>
+				<form action="MyPage" method="post">
+				<input id="" name="email" maxlength="140" placeholder="Email">
+				<p class=""><input class="" type="submit" value="設定"></p>
+				</form>
+			</div>
+			
+			<div>
+				<div>
+					<h2>退会する &#x1f622;</h2>
+					<p>やめて！やめてにゃ〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜</p>
+				</div>
+				<div>
+					<a href="#">退会する</a>
+				</div>
+				<div>
+					<p>本当に退会しますか?</p>
+					<a href="#">はい</a>
+					<a href="#">やっぱやめる</a>
+				</div>
+			</div>
 
 		</main>
 		

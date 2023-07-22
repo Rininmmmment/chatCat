@@ -26,7 +26,7 @@ String errorMsg = (String) request.getAttribute("errorMsg");
 		<main>
 			<form action="Restaurant" method="post">
 				<p class="form-username"><%=loginUser.getUserid()%></p>
-				<textarea id="textarea" name="text" maxlength="140" cols="60" rows="1" placeholder="ねこちゃんと話してみよう"></textarea>
+				<textarea id="textarea" name="text" maxlength="140" cols="60" rows="1" placeholder="シェフにレシピを聞いてみよう"></textarea>
 				<p class="form-submit-container"><input class="form-submit" type="submit" value="chat!"></p>
 			</form>
 						

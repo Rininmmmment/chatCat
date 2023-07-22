@@ -53,7 +53,7 @@ public class Home extends HttpServlet{
 		request.setCharacterEncoding("UTF-8");
 		String text = request.getParameter("text");
 		
-		 // つぶやきリスト取得用のユーザーIDを初期化
+		// つぶやきリスト取得用のユーザーIDを初期化
 	    String user_account = "";
 		
 	    // 入力値チェック
