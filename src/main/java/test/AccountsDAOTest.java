@@ -1,13 +1,14 @@
 package test;
 
 import dao.AccountsDAO;
-import model.Account;
+import model.User;
+
 
 public class AccountsDAOTest {
   public static void main(String[] args) {
 	  AccountsDAO dao = new AccountsDAO();
-	  Account account = new Account("user_cat01", "1234");
-	  dao.addEmail(account, "aaa@gmail.com");
+	  User user = new User("user_cat01", "1234");
+	  dao.addEmail(user, "bbb@gmail.com");
 	  
 	// LoginLogicのテスト
 //	User testuser = new User("admin", "1234");

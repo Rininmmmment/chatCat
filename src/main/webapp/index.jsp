@@ -15,7 +15,7 @@
 	きみが来てくれてうれしいにゃん。<br>
 	はやく一緒にお話するにゃん！
 	</p>
-	<a class="hukidashi-a" href="/chatCat/login.jsp">入園する</a>
+	<a class="hukidashi-a" href="/chatCatApp/login.jsp">入園する</a>
 	<a class="hukidashi-a" href="Registation">入園パスポートを取得する</a>
 </div>
 

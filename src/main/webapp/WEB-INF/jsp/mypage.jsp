@@ -59,9 +59,9 @@ int level = (int)request.getAttribute("level");
 			<div>
 				<h2>メールアドレス</h2>
 				<p>暇な時にメールするにゃ〜〜</p>
-				<form action="MyPage" method="post">
-				<input id="" name="email" maxlength="140" placeholder="Email">
-				<p class=""><input class="" type="submit" value="設定"></p>
+				<form action="Mypage" method="post">
+					<input id="" name="email" maxlength="140" placeholder="Email">
+					<p class=""><input class="" type="submit" value="設定"></p>
 				</form>
 			</div>
 			

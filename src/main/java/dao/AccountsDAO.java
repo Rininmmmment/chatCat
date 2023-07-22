@@ -10,6 +10,7 @@ import java.util.List;
 
 import model.Account;
 import model.GetMutter;
+import model.User;
 
 public class AccountsDAO {
   // データベース接続に使用する情報
@@ -111,7 +112,7 @@ public class AccountsDAO {
     return true;
   }
   
-  public boolean addEmail(Account account, String email) {
+  public boolean addEmail(User login_user, String email) {
 	  // JDBCドライバを読み込む
 	  try {
 		  Class.forName("org.h2.Driver");
@@ -127,7 +128,7 @@ public class AccountsDAO {
       
       // INSERT文中の「?」に使用する値を設定しSQLを完成
       pStmt.setString(1, email);
-      pStmt.setString(2, account.getUserid());
+      pStmt.setString(2, login_user.getUserid());
 
       // INSERT文を実行（resultには追加された行数が代入される）
       int result = pStmt.executeUpdate();
