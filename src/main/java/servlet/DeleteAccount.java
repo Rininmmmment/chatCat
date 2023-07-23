@@ -27,18 +27,7 @@ public class DeleteAccount extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-    	// セッションスコープに保存されたユーザー情報を取得
-		HttpSession session = request.getSession();
-		User loginUser = (User) session.getAttribute("loginUser");
-		
-		// メールアドレスを変更
-		AccountsDAO dao = new AccountsDAO();
-		dao.deleteAccount(loginUser);
-		
-		// JSPへフォワード
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/mypage.jsp");
-//	    dispatcher.forward(request, response);
+
 	}
 
 }

@@ -91,8 +91,13 @@ public class SelectPromptAndPost {
 
         // 投稿
         for (final CompletionChoice choice : choiceList) {
-            PostMutter mutter = new PostMutter(cat, choice.getText());
-            postMutterLogic.execute(mutter, user_account, bbs_type);
+//        	System.out.println(choice);
+        	if (choice.getText()!= null && choice.getText().length() != 0) {
+        		PostMutter mutter = new PostMutter(cat, choice.getText());
+                postMutterLogic.execute(mutter, user_account, bbs_type);
+        	}else {
+        		System.out.println("空の返答");
+        	}
         }
         
         System.out.println("AIねこちゃん投稿完了！");

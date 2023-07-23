@@ -36,7 +36,8 @@
 			<input class="login-input" type="text" name="pass" placeholder="パスワード"><br>
 			<input class="login-submit" type="submit" value="ログイン">
 		</form>
-		<p><a class="login-a-register" href="Registation">はじめての方はこちら</a></p>	
+		<p><a class="login-a-register" href="Registation">はじめての方はこちら</a></p>
+		<p><a class="login-a-register" href="#">パスワードを忘れた</a></p>
 	</div>
 
 </body>

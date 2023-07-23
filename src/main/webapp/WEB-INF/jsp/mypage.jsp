@@ -67,12 +67,10 @@ int level = (int)request.getAttribute("level");
 			
 			<div>
 				<h2>メール配信設定</h2>
-				<a href="#">配信する</a>
-				<a href="#">配信しない</a>
 				<form action="AlterMailDeliveryPermission" method="post">
    					<label><input type="checkbox" name="whether_permit" value='permit'>メールを配信する</label>
-   					<label><input type='hidden' name="whether_permit" value='refuse'>配信しない（非表示）</label>
-					<input type="submit" value="変更する">
+   					<label><input type='hidden' name="whether_permit" value='refuse'></label>
+					<input type="submit" value="変更">
 				</form>
 			</div>
 			
