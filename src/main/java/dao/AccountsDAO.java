@@ -142,5 +142,64 @@ public class AccountsDAO {
     return true;
   }
   
+  public boolean alterMailDeliveryPermission(User login_user, String whether_permit) {
+	  // JDBCドライバを読み込む
+	  try {
+		  Class.forName("org.h2.Driver");
+	  } catch(ClassNotFoundException e) {
+	      throw new IllegalStateException("JDBCドライバを読み込めませんでした");
+	  }
+    // データベース接続
+    try(Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)) {
+
+      // INSERT文の準備
+      String sql = "UPDATE ACCOUNTS SET DELIVERY_EMAIL = ? WHERE USER_ID = ?";
+      PreparedStatement pStmt = conn.prepareStatement(sql);
+      
+      // INSERT文中の「?」に使用する値を設定しSQLを完成
+      pStmt.setString(1, whether_permit);
+      pStmt.setString(2, login_user.getUserid());
+
+      // INSERT文を実行（resultには追加された行数が代入される）
+      int result = pStmt.executeUpdate();
+      if (result != 1) {
+        return false;
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+      return false;
+    }
+    return true;
+  }
+  
+  public boolean deleteAccount(User login_user) {
+	  // JDBCドライバを読み込む
+	  try {
+		  Class.forName("org.h2.Driver");
+	  } catch(ClassNotFoundException e) {
+	      throw new IllegalStateException("JDBCドライバを読み込めませんでした");
+	  }
+    // データベース接続
+    try(Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)) {
+
+      // INSERT文の準備
+      String sql = "DELETE FROM ACCOUNTS WHERE USER_ID = ?";
+      PreparedStatement pStmt = conn.prepareStatement(sql);
+      
+      // INSERT文中の「?」に使用する値を設定しSQLを完成
+      pStmt.setString(1, login_user.getUserid());
+
+      // INSERT文を実行（resultには追加された行数が代入される）
+      int result = pStmt.executeUpdate();
+      if (result != 1) {
+        return false;
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+      return false;
+    }
+    return true;
+  }
+  
   
 }

@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>servlet.ClinicService</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AlterMailDeliveryPermission</servlet-name>
+  	<display-name>AlterMailDeliveryPermission</display-name>
+  	<description></description>
+  	<servlet-class>servlet.AlterMailDeliveryPermission</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>MyPage</servlet-name>
   	<url-pattern>/MyPage</url-pattern>
@@ -23,5 +29,9 @@
   <servlet-mapping>
   	<servlet-name>ClinicService</servlet-name>
   	<url-pattern>/ClinicService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AlterMailDeliveryPermission</servlet-name>
+  	<url-pattern>/AlterMailDeliveryPermission</url-pattern>
   </servlet-mapping>
 </web-app>

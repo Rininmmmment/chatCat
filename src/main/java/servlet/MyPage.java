@@ -48,9 +48,6 @@ public class MyPage extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String email = request.getParameter("email");
 		
-		// つぶやきリスト取得用のユーザーIDを初期化
-	    String user_account = "";
-		
 	    // 入力値チェック
 	    if (email != null && email.length() != 0) {
 	    	// セッションスコープに保存されたユーザー情報を取得
