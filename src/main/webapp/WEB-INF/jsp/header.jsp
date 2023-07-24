@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <header>
 	<p>
-		<img class="img-Logo" src="${pageContext.request.contextPath}/image/Logo.png">
+		<a href="Home"><img class="img-Logo" src="${pageContext.request.contextPath}/image/Logo.png"></a>
 	</p>
 	<nav>
 		<ul>

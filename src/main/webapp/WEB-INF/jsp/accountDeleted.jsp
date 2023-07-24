@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>会員登録完了</title>
+<title>Insert title here</title>
 </head>
 <body>
-会員登録完了
-<a href="login.jsp">ログインする</a>
+<p>アカウントが削除されました</p>
+<a href="/login.jsp">TOP</a>
 </body>
 </html>

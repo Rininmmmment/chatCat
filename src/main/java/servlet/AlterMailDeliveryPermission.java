@@ -32,9 +32,9 @@ public class AlterMailDeliveryPermission extends HttpServlet {
 		AccountsDAO dao = new AccountsDAO();
 		dao.alterMailDeliveryPermission(loginUser, whether_permit);
 		
-		// JSPへフォワード
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/mypage.jsp");
-//	    dispatcher.forward(request, response);
+		// Mypageにリダイレクト
+		String url = "Mypage";
+		response.sendRedirect(url);
 	}
 
 }
